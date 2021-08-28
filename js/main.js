@@ -239,3 +239,12 @@ $(".slider__bottom-control .next").on("click", function () {
   $carousel.flickity("next");
 });
 //FLICKITY PHOTO
+$(".photos").flickity({
+  contain: true,
+  wrapAround: false,
+  freeScroll: true,
+  cellAlign: "left",
+  lazyLoad: 3,
+  imagesLoaded: true,
+  prevNextButtons: false,
+});

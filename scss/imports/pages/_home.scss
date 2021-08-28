@@ -55,6 +55,7 @@
       &-paging {
         display: flex;
         align-items: center;
+
         .number {
           font-size: 42px;
           color: $yellow-cl;
@@ -569,20 +570,44 @@
       }
     }
   }
+  // .photos {
+  //   width: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   overflow: hidden;
+  //   gap: 10px;
+  //   padding-top: 0 !important;
+  //   .item {
+  //     margin: 0 15px;
+  //     img {
+  //       max-width: 100%;
+  //     }
+  //   }
+  // }
   .photos {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    gap: 10px;
     padding-top: 0 !important;
-    .item {
-      // margin: 0 15px;
-      img {
-        max-width: 100%;
+    .flickity-lazyloaded {
+      opacity: 1;
+      transition: opacity 0.3s;
+      -webkit-transition: opacity 0.3s;
+    }
+    img {
+      max-width: initial;
+      height: 450px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      -webkit-transition: opacity 0.3s;
+      margin: 0 10px;
+      display: block;
+      @include sm {
+        height: 240px;
       }
     }
+    .flickity-page-dots li {
+      display: none !important;
+    }
   }
+
   .popup-video {
     z-index: 1000;
     display: none;
